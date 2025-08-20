@@ -15,12 +15,9 @@ def main():
         secim = input("Seçiminizi girin: ")
 
         if secim == "1":
-            title = input("Kitap adı: ")
-            author = input("Yazar adı: ")
             isbn = input("ISBN numarası (13 haneli, sadece rakam): ")
             try:
-                book = Book(title, author, isbn)
-                library.add_book(book)
+                library.add_book(isbn)
                 print("Kitap başarıyla eklendi.")
             except ValueError as e:
                 print(f"Hata: {e}")
